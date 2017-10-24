@@ -1,2 +1,12 @@
 <h1> <%= @post.title %></h1>
 <p> <%= @post.body %></p>
+
+<hr>
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= comment.body %>
+    </div>
+  </div>
+<% end %>
