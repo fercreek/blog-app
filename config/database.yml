@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: postgres
+  pool: 5
+  timeout: 5000
+development:
+  <<: *default
+  database: writefully_development
+test:
+  <<: *default
+  database: writefully_development
+production:
+  <<: *default
+  database: writefully_development
+  username: writefully
+  password: <%= ENV['WRITEFULLY_DATABASE_PASSWORD'] %>
+
