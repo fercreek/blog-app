@@ -2,7 +2,7 @@
   <div class="actions col-md-8 col-md-offset-2">
     <%= link_to "New post", new_post_path %>
   </div>
-  <%= @posts.each do |post| %>
+  <% @posts.each do |post| %>
     <%= render post %>
   <% end %>
 </div>
