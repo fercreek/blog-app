@@ -1,4 +1,4 @@
-<%= div_for post, class: 'col-md-8 col-md-offset-2' do %>
+<%= div_for post do %>
   <h2> <%= link_to post.title, post_path(post) %> </h2>
   <p> <%= post.body %> </p>
   <p>Comments(<%= post.comments.count %>)</p>
