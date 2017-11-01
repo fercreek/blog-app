@@ -8,4 +8,8 @@ class User < ApplicationRecord
   def generate_confirmation_token
     self.confirmation_token = SecureRandom.hex
   end
+
+  def confirmed?
+    self.confirmed_at.present?
+  end
 end

@@ -8,6 +8,7 @@ class ConfirmationsController < ApplicationController
     @user.confirmed_at = DateTime.now
     if @user.save
       session[:user_id] = @user.id
+      redirect_to root_path
     else
       # 
     end
