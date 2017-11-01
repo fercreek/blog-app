@@ -1,6 +1,6 @@
 <h1>Lets confirm your email</h1>
 
-<%= form_tag confirmation_path do %>
+<%= form_tag auth_confirmation_path do %>
   <div class="form-group">
     <%= label_tag :token %>
     <%= text_field_tag :token, nil, class: 'form-control' %>  

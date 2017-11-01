@@ -1,4 +1,4 @@
-class ConfirmationsController < ApplicationController
+class Auth::ConfirmationsController < Auth::BaseController
   def show
     
   end
