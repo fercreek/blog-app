@@ -2,7 +2,5 @@ Welcome to our site!
 ====================
 Enjoy your stay!
 
-Copy this token: <%= @user.confirmation_token %>
-
 copy the url below to confirm your email
 <%= new_auth_confirmation_url(token:  @user.confirmation_token) %>
