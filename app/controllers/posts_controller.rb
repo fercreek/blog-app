@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.order("updated_at DESC")
+    @posts = Post.published.order("published_at DESC")
   end
 
   def show

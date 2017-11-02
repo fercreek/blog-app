@@ -1,5 +1,6 @@
 <%= div_for post do %>
   <h2> <%= link_to post.title, post_path(post) %> </h2>
+  <p> <%= time_ago_in_words(post_published_at) %> ago</p>
   <p> <%= post.body %> </p>
   <p>Comments(<%= post.comments.count %>)</p>
   <ul>
