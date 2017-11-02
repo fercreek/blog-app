@@ -8,6 +8,10 @@ class Post < ApplicationRecord
 
       transition :draft => :published
     end
+
+    event :unpublish do
+      transition :published => :draft
+    end
   end
 
   attr_accessor :state_event
