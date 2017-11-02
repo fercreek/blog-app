@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-md-8">
       <h2> <%= link_to post.title, admin_post_path(post) %> </h2>
+      <p><%= time_ago_in_words(post.published_at) %> ago</p>
       <p> <%= post.body %> </p>
       <p>Comments(<%= post.comments.count %>)</p>
       <ul>
@@ -13,6 +14,7 @@
     <div class="col-md-3">
       <%= link_to "Edit", edit_admin_post_path(post), class: "btn btn-primary" %>
       <%= link_to "Delete", admin_post_path(post), method: :delete, class: "btn btn-danger" %>
+      <%= post.status %>
     </div>
   </div>  
 <% end %>
