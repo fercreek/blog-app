@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :posts
-
+    resources :posts do
+      get '/statuses/:status', to: 'posts#index', as: :by_status, on: :collection
+    end
     root to: 'posts#index'
   end
 
